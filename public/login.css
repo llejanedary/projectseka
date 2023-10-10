@@ -1,0 +1,74 @@
+* {
+    font-family: 'Mitr', sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #F8F1E3;
+}
+header{
+    width: fit;
+    height: 80px;
+    background-color:#93B1C7;
+}
+#kkumail {
+    margin: 0 auto; /* จัดให้อยู่ตรงกลางแนวนอน */
+    border-radius: 22px;
+    width: 280px;
+    height: 28px; /* เพิ่มความสูงเพื่อให้งานกับ justify-content และ align-items */
+    background-color: #F8F1E3;
+    border: #605D58 solid 0.5px;
+    display: block;
+    justify-content: center; /* จัดให้อยู่ตรงกลางแนวนอน */
+    align-items: center; /* จัดให้อยู่ตรงกลางแนวตั้ง */
+    margin-bottom: 0px;
+    text-indent: 10px;
+}
+#password {
+    margin: 0 auto; /* จัดให้อยู่ตรงกลางแนวนอน */
+    border-radius: 22px;
+    width: 280px;
+    height: 28px; /* เพิ่มความสูงเพื่อให้งานกับ justify-content และ align-items */
+    background-color: #F8F1E3;
+    border: #605D58 solid 0.5px;
+    display: block;
+    justify-content: center; /* จัดให้อยู่ตรงกลางแนวนอน */
+    align-items: center; /* จัดให้อยู่ตรงกลางแนวตั้ง */
+    margin-bottom: -15px;
+    text-indent: 10px;
+}
+p.login {
+    color: black;
+    opacity: 0.7;
+    display: flex;
+    justify-content: center; /* จัดให้อยู่ตรงกลางแนวนอน */
+    align-items: center; /* จัดให้อยู่ตรงกลางแนวตั้ง */
+    text-align: center; /* จัดให้อยู่ตรงกลางทั้งแนวนอนและแนวตั้ง */
+    font-size: 1.4em;
+    margin-top: 100px;
+}
+.gologin {
+    margin: 0 auto; /* ทำให้ปุ่มอยู่ตรงกลางของพื้นที่หรือ container */
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 280px;
+    height: 30px;
+    background-color: #93B1C7;
+    border-radius: 22px;
+    border: none;
+    color: #F8F1E3;
+    font-size: 1.1em;
+    margin-top: 20px;
+}
+p.titelregis{
+    color: black;
+    opacity: 0.7;
+    display: flex;
+    justify-content: center; /* จัดให้อยู่ตรงกลางแนวนอน */
+    align-items: center; /* จัดให้อยู่ตรงกลางแนวตั้ง */
+    text-align: center; /* จัดให้อยู่ตรงกลางทั้งแนวนอนและแนวตั้ง */
+    font-size: 15px;
+    margin-top: 10px;
+}

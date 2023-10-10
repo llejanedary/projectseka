@@ -1,0 +1,245 @@
+* {
+    font-family: 'Mitr', sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F8F1E3;
+}
+header{
+    width: fit;
+    height: 80px;
+    background-color:#93B1C7;
+}
+a{
+    text-decoration: none;
+    color:#000 ;
+}
+a:hover{
+    background-color: #93B1C7;
+    color: #F8F1E3;
+}
+.sidebar img{
+    width: 70px;
+    height: 70px ;
+    object-fit: cover;
+    background-color: #ffff;
+    margin-top: 40px;
+    opacity: 0.7;
+}
+.username,.email{
+    opacity: 0.7;
+    line-height: 1.4;
+}
+.username{
+    margin-top: 10px;
+}
+
+.stdlist {
+    width: 200px;
+    height: 50px;
+    background-color: #ffff;
+    border-top: 2px solid #93B1C7;
+    border-bottom: 2px solid #93B1C7;
+    border-left: none; /* ลบ border ด้านซ้าย */
+    border-right: none; /* ลบ border ด้านขวา */
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -2px; /* ย้าย .checkscore ขึ้นไปด้านบนเพื่อทับ .addscore */
+    z-index: 1; /* เพิ่มค่า z-index ต่ำลงเพื่อให้ .addscore:hover ทับ .checkscore */
+    margin-top: 20px;
+    text-decoration: none; /* ลบการอันขีดใต้ลิงค์ */
+}
+
+.talist {
+    width: 200px;
+    height: 40px;
+    background-color: #ffff;
+    border-bottom: 2px solid #93B1C7;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -2px; /* ย้าย .checkscore ขึ้นไปด้านบนเพื่อทับ .addscore */
+    z-index: 1; /* เพิ่มค่า z-index ต่ำลงเพื่อให้ .addscore:hover ทับ .checkscore */
+    margin-top: 10px;
+}
+
+.stdscore {
+    width: 200px;
+    height: 40px;
+    background-color: #ffff;
+    border-bottom: 2px solid #93B1C7;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -2px; /* ย้าย .checkscore ขึ้นไปด้านบนเพื่อทับ .addscore */
+    z-index: 1; /* เพิ่มค่า z-index ต่ำลงเพื่อให้ .addscore:hover ทับ .checkscore */
+    margin-top: 10px;
+}
+
+.attendscore {
+    width: 200px;
+    height: 40px;
+    background-color: #ffff;
+    border-bottom: 2px solid #93B1C7;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -2px; /* ย้าย .checkscore ขึ้นไปด้านบนเพื่อทับ .addscore */
+    z-index: 1; /* เพิ่มค่า z-index ต่ำลงเพื่อให้ .addscore:hover ทับ .checkscore */
+    margin-top: 10px;
+}
+
+
+.logout {
+    width: 200px;
+    height: 40px;
+    background-color: #ffff;
+    border-bottom: 2px solid #93B1C7;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -2px; /* ย้าย .checkscore ขึ้นไปด้านบนเพื่อทับ .addscore */
+    z-index: 1; /* เพิ่มค่า z-index ต่ำลงเพื่อให้ .addscore:hover ทับ .checkscore */
+    margin-top: 10px;
+}
+
+.logout:hover , .attendscore:hover , .stdscore:hover , .talist:hover , .stdlist:hover{
+    background-color: #93B1C7;
+    color: #F8F1E3;
+    width: 250px;
+    height: 50px;
+    top: -4px; /* ย้าย .checkscore ขึ้นไปด้านบนเพื่อทับ .addscore */
+    cursor: pointer;
+}
+
+.sidebar {
+        width: 250px;
+        height: 580px ;
+        background-color:rgb(255, 255, 255);
+        border-radius: 10px;
+        margin-top: 40px;
+        float: left;
+        margin-left: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* จัดเนื้อหาตรงกลางแนวนอน */
+        box-shadow: 5px 5px 5px  rgba(0.1, 0.1, 0.1, 0.1);
+
+        
+}
+
+.content {
+    width: 80%; /* ให้เนื้อหาภายในเป็น 80% ของหน้าจอ */
+    padding: 15px;
+    width: 1050px;
+    height: 23px ;
+    background-color:rgb(255, 255, 255);
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-left: 380px;
+
+}
+
+.table {
+    
+        border-collapse: collapse;
+        width: 100%;
+
+        margin-top: 40px;
+        border: 1px solid #93B1C7; /* สีและขนาดขอบ */
+
+    }
+    
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #93B1C7;
+
+    }
+  
+tr:hover{background-color:#f5f5f5}
+
+#section {  
+    padding: 10px; 
+    font-size: 14px; 
+    width: 110px;
+    height: 40px;
+    background-color: #ffffff; 
+    border-radius: 60px; 
+    color: #93B1C7;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #93B1C7; /* สีและขนาดขอบ */
+    margin-top: 70px; 
+    cursor: pointer;
+
+}
+
+#filterstd {  
+    padding: 10px; 
+    font-size: 14px; 
+    width: 250px;
+    height: 15px;
+    background-color: #ffffff; 
+    border-radius: 60px; 
+    color: #93B1C7;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #93B1C7; /* สีและขนาดขอบ */
+    margin-top: 65px; 
+    margin-left: 0px;
+    text-indent: 10px; /* ย่อหน้าเข้ามา 10px */
+    cursor: pointer;
+
+}
+
+#search {  
+    line-height: 17px; /* ความสูงของบรรทัดข้อความเพื่อจัดกลาง */
+
+    padding: 10px; 
+    font-size: 14px; 
+    width: 70px;
+    height: 37px;
+    background-color: #93B1C7; 
+    border-radius: 60px; 
+    color: #ffffff;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #93B1C7; /* สีและขนาดขอบ */
+    margin-top: 67px; 
+    margin-left: 5px;
+    cursor: pointer;
+
+}
+
+#addstdbt {
+    line-height: 17px;
+    padding: 10px; 
+    font-size: 14px; 
+    width: 70px;
+    height: 37px;
+    background-color: #93B1C7; 
+    border-radius: 60px; 
+    color: #ffffff;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #93B1C7;
+    position: fixed;
+    top: 400px;
+    left: 850px;
+    cursor: pointer;
+}
+
+
+#addstdbt:hover, #search:hover {
+    background-color: #ffffff;
+    color: #93B1C7;
+}

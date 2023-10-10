@@ -1,0 +1,122 @@
+.my-nav {
+    background-color: #93B1C7;
+    height: 100px;
+    border-radius: 0px;
+}
+
+.my-navforgot {
+    background-color: #93B1C7;
+    height: 100px;
+    border-radius: 0px;
+}
+
+.login {
+    margin-left: 525px;
+    margin-top: 90px;
+}
+
+.logininput {
+    width: 200px;
+    height: 20px;
+}
+
+.login h4 {
+    color: rgb(104, 101, 101);
+    margin-left: 60px;
+}
+
+.login h5 {
+    color: rgb(104, 101, 101);
+    margin-left: 20px;
+}
+
+.login form input {
+    width: 300px;
+    height: 30px;
+    margin-left: -60px;
+    background-color: #f9f6e3;
+    border-radius: 15px;
+    border: 1px solid black;
+}
+
+.forgot {
+    margin-top: 10px;
+    margin-left: 0px;
+}
+
+.forgot a {
+    top: 50px;
+    margin-left: 180px;
+    font-size: 12px;
+    color: rgb(152, 150, 150);
+}
+
+button {
+    background-color: #93B1C7;
+    border-radius: 15px;
+    height: 35px;
+    width: 305px;
+    margin-top: 10px;
+    margin-left: -60px;
+}
+
+.selected {
+    margin-left: -80px;
+    display: flex;
+    margin-top: 20px;
+}
+
+.selected p {
+    margin-top: 0px;
+}
+
+.selected input[type="radio"] {
+    margin-right: 6px;
+    /* ปรับระยะห่างขาวข้างขวาของปุ่ม radio */
+    margin-left: 20px;
+    /* ปรับระยะห่างขาวข้างซ้ายของปุ่ม radio */
+    width: 17px;
+    height: 17px;
+}
+
+.notacc a {
+    font-size: 12px;
+    color: rgb(152, 150, 150);
+}
+
+.notacc {
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+
+/* .orr {
+    background-color: #93B1C7;
+} */
+
+.orr hr {
+    width: 400px;
+    margin-top: 40px;
+    margin-left: -333px;
+    background-color: #93B1C7;
+}
+
+.orr2 hr {
+    width: 400px;
+    margin-top: -22px;
+    margin-left: 120px;
+    background-color: #93B1C7;
+}
+
+.orr p {
+    margin-top: -24px;
+    margin-left: 80px;
+}
+
+.container2 {
+    margin-top: 100px;
+    margin-left: 650px;
+}
+
+
+/* ส่วนนี้จะเป็นหน้า home */

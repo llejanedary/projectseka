@@ -1,0 +1,184 @@
+* {
+    font-family: 'Mitr', sans-serif;
+}
+
+.my-nav {
+    background-color: #93B1C7;
+    height: 100px;
+    border-radius: 0px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff4df;
+}
+
+header {
+    width: fit;
+    height: 80px;
+    background-color: #93B1C7;
+}
+
+.boxprofile {
+    width: 250px;
+    height: 580px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin-top: 40px;
+    float: left;
+    margin-left: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* จัดเนื้อหาตรงกลางแนวนอน */
+    box-shadow: 5px 5px 5px rgba(0.1, 0.1, 0.1, 0.1);
+}
+
+.boxprofile img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    background-color: #ffff;
+    margin-top: 40px;
+    opacity: 0.7;
+}
+
+.username,
+.email {
+    opacity: 0.7;
+    line-height: 1.4;
+}
+
+.username {
+    margin-top: 10px;
+}
+
+.logout {
+    width: 200px;
+    height: 50px;
+    background-color: #ffff;
+    border-top: 2px solid #93B1C7;
+    border-bottom: 2px solid #93B1C7;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -2px;
+    /* ย้าย .checkscore ขึ้นไปด้านบนเพื่อทับ .addscore */
+    z-index: 1;
+    /* เพิ่มค่า z-index ต่ำลงเพื่อให้ .addscore:hover ทับ .checkscore */
+    margin-top: 20px;
+}
+
+.logout:hover {
+    background-color: #93B1C7;
+    color: #F8F1E3;
+    width: 250px;
+    height: 50px;
+    top: -2px;
+    /* ย้าย .checkscore ขึ้นไปด้านบนเพื่อทับ .addscore */
+    cursor: pointer;
+}
+
+.text {
+    width: 200px;
+    height: 50px;
+    background-color: #ffff;
+    border-top: 2px solid #93B1C7;
+    border-bottom: 2px solid #93B1C7;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -2px;
+    /* ย้าย .checkscore ขึ้นไปด้านบนเพื่อทับ .addscore */
+    z-index: 1;
+    /* เพิ่มค่า z-index ต่ำลงเพื่อให้ .addscore:hover ทับ .checkscore */
+    margin-top: 20px;
+}
+
+.text2 p {
+    position: relative;
+    top: 13px;
+}
+
+.textcenter {
+    margin: 60px;
+    font-size: larger;
+}
+
+.labscore p {
+    position: relative;
+    margin-left: 100px;
+    font-size: larger;
+    float: left;
+}
+
+table {
+    width: 60%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    margin-left: -85px;
+    float: left;
+}
+
+table,
+th,
+td {
+    border: 1px solid #16aeeb;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: rgb(216, 226, 223);
+}
+
+tr:nth-child(even) {
+    background-color: rgb(230, 240, 236);
+}
+
+.assignmetscore p {
+    margin-top: 30px;
+    position: relative;
+    margin-left: 100px;
+    font-size: larger;
+    float: left;
+}
+
+.table2 {
+    width: 60%;
+    border-collapse: collapse;
+    margin-top: 85px;
+    margin-left: -155px;
+    float: left;
+}
+
+.testscore p {
+    margin-top: 30px;
+    position: relative;
+    margin-left: 100px;
+    font-size: larger;
+    float: left;
+}
+
+.table3 {
+    width: 60%;
+    border-collapse: collapse;
+    margin-top: 85px;
+    margin-left: -90px;
+    float: left;
+}
+
+.cardSubJ {
+    margin-top: 40px;
+    margin-left: 60px;
+    float: left;
+}
