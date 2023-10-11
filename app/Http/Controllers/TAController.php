@@ -8,6 +8,8 @@ use App\Models\Student;
 use App\Models\Teacher;
 use App\Models\classroomhasTa;
 use App\Models\Classroom;
+use App\Models\Ta;
+
 class TAController extends Controller
 {
     // public function TA(){
@@ -31,10 +33,10 @@ class TAController extends Controller
     }
     public function index()
     { 
-        $session=session('std_id');
-        $student = Student::where('kkumail', $session)->first();
-        $classrooms = classroomhasTa::where('id_ta',$student->id)->get();
-        return view('Home_TA', compact('student','classrooms'));
+        $session=session('id_ta');
+        $student =Ta::where('kkumail', $session)->first();
+        $classrooms = classroomhasTa::where('id_ta', $student->id)->get();
+        return view('Home_TA', compact('student', 'classrooms'));
     }  
     public function create(Request $request)
     {

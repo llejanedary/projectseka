@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Classroom;
 use Illuminate\Http\Request;
 
 class StudentController extends Controller
@@ -14,10 +15,10 @@ class StudentController extends Controller
         return view('Student'); //ดึงค่ามาจาก id ไม่มีสิทธิ์การเข้าถึงคะแนนดูได้อย่างเดียว
     }
 
-    public function course($id){
-        $course = Subject::find($id);
-        return view('Student',compact('course'));
-    }
+    // public function course($id){
+    //     $course = Classroom::find($id);
+    //     return view('Student',compact('course'));
+    // }
 
     public function detailStudent(Request $request){
         // $std = Student::find($id);

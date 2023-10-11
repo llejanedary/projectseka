@@ -20,10 +20,6 @@ use App\Http\Controllers\TAController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
 Route::get('/login', [LoginController::class, 'loginForm'])->name('login.form');
 Route::post('/login', [LoginController::class, 'login'])->name('login');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
@@ -32,14 +28,13 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/register', [RegisterController::class, 'registerForm'])->name('register.form');
 Route::post('/register', [RegisterController::class, 'register'])->name('register');
 
-Route::get('/indexteacher', [IndexTeacherController::class, 'index'])->name('indexteacher');
-Route::post('/makesubject', [IndexTeacherController::class, 'create'])->name('makesubject');
-
-
-// Route::get('/indexstudent', [IndexStudentController::class, 'index'])->name('indexstudent');
-
-
-Route::get('class/{id}', [TeacherController::class, "stdlist"])->name('class');
+Route::get('/', function () {
+    return view('welcome');
+});
+Route::middleware(['checkRole'])->group(function(){
+    Route::get('/indexteacher', [IndexTeacherController::class, 'index'])->name('indexteacher');
+    Route::post('/makesubject', [IndexTeacherController::class, 'create'])->name('makesubject');
+    Route::get('class/{id}', [TeacherController::class, "stdlist"])->name('class');
 Route::get('score', [TeacherController::class, "stdscore"])->name('score');
 Route::get('addstd/{id}', [TeacherController::class, "addstd"])->name('addstd');
 
@@ -57,12 +52,27 @@ Route::post('searchta', [TeacherController::class, 'searchta'])->name('searchta'
 Route::post('deletestd', [TeacherController::class, 'deletestd'])->name('deletestd');
 Route::post('deleteta', [TeacherController::class, 'deleteta'])->name('deleteta');
 
-Route::get('/student', [StudentController::class,'student']);
+}); 
+
+
+
+Route::middleware(['checkRole'])->group(function (){
+    Route::get('/student', [StudentController::class,'student']);
 
 Route::get('/detailStudent',function () {
     return view('detailStudent');
 });
-Route::get('Home_TA',[TAController::class, "index"]);
-// Route::get('HomeTA', [TAController::class, 'name'])->name('name');
-Route::get('TAaddsc', [TAController::class, 'TAadd'])->name('TAaddsc');
-Route::get('TAview', [TAController::class, 'TAview'])->name('TAview');
+});
+
+
+// Route::get('/indexstudent', [IndexStudentController::class, 'index'])->name('indexstudent');
+
+Route::middleware(['checkRole'])->group(function (){
+    Route::get('Home_TA', [TAController::class, 'index'])->name('Home_TA');
+    Route::get('HomeTA', [TAController::class, 'name'])->name('name');
+    Route::get('TAaddsc', [TAController::class, 'TAadd'])->name('TAaddsc');
+    Route::get('TAview', [TAController::class, 'TAview'])->name('TAview');
+});
+
+
+

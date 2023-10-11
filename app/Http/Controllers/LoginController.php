@@ -22,48 +22,24 @@ class LoginController extends Controller
         $kkumail = $request->kkumail;
         $password = $request->password;
         
-       
-        $teacher = Teacher::where('kkumail', $kkumail)->first();
-
-        if (!$teacher) {
-            $student = Student::where('kkumail', $kkumail)->first();
-            $ta = Ta::where('kkumail',$kkumail)->first();
-        }
-
-        if ($teacher && Hash::check($password, $teacher->password)) {
-
-            $teacher = Teacher::where('kkumail', $kkumail)->first();
-        
+        $ta = Ta::where('kkumail', $request->kkumail)->first();
+        $teacher = Teacher::where('kkumail', $request->kkumail)->first();
+        $student = Student::where('kkumail', $request->kkumail)->first();
+    
+        if ($ta && Hash::check($password, $ta->password)) {
+            $request->session()->put('id_ta', $ta->kkumail);
+            return redirect()->route('Home_TA');
+        } elseif ($teacher && Hash::check($password, $teacher->password)) {
             $request->session()->put('teacher_id', $teacher->kkumail);
-        
             return redirect()->route('indexteacher');
-            
         } elseif ($student && Hash::check($password, $student->password)) {
-
-            $students = Student::where('kkumail', $kkumail)->first();
-
-            $request->session()->put('std_id', $students->kkumail);
+            $request->session()->put('std_id', $student->kkumail);
             return redirect('student');
-            
-
-        } elseif($ta && Hash::check($password,$ta->$password)){
-            $ta = Ta::where('kkummail',$kkumail)->first();
-            $request->session()->put('id_ta',$ta->kkumail);
-            return redirect('Home_TA');
         }
         
-        
-        
-        else {
-            session()->flash('alert', 'อีเมลหรือรหัสผ่านไม่ถูกต้อง');
-            return redirect()->back();
-        }
-        
+        session()->flash('alert', 'อีเมลหรือรหัสผ่านไม่ถูกต้อง');
+        return redirect()->back();
     }
-
-
-
-
     public function logout()
     {
     Auth::logout();

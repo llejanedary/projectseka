@@ -34,7 +34,6 @@
                     <p class="card-text">test 1</p>
                 </div>
             </a>
-           
         </div>
 
 </div> --}}

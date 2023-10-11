@@ -43,29 +43,28 @@
             toggleTaIdField(); 
         }
 
+        function toggleStudentIdField() {
+    var studentRadio = document.querySelector('input[name="role"][value="student"]');
+    var studentIdField = document.getElementById('studentIdField');
 
-    function toggleStudentIdField() {
-        var studentRadio = document.querySelector('input[name="role"][value="student"]');
-        var studentIdField = document.getElementById('studentIdField');
-
-        if (studentRadio.checked) {
-            studentIdField.style.display = 'block';
-        } else {
-            studentIdField.style.display = 'none';
-        }
-
+    if (studentRadio.checked) {
+        studentIdField.style.display = 'block';
+    } else {
+        studentIdField.style.display = 'none';
     }
-    function toggleTaIdField() {
-        var TARadio = document.querySelector('input[name="role"][value="Ta"]');
-        var  TaIdField = document.getElementById('TaIdField');
+}
 
-        if (TARadio.checked) {
-            TaIdField.style.display = 'block';
-        } else {
-            TaIdField.style.display = 'none';
-        }
+function toggleTaIdField() {
+    var TARadio = document.querySelector('input[name="role"][value="ta"]');
+    var TaIdField = document.getElementById('TaIdField');
 
+    if (TARadio.checked) {
+        TaIdField.style.display = 'block';
+    } else {
+        TaIdField.style.display = 'none';
     }
+}
+
     function check() {
         var teacherRadio = document.querySelector('input[name="role"][value="teacher"]');
         var teachercheck = document.getElementById('studentIdField');
@@ -93,7 +92,7 @@
                 <div class="radioitem">
                     <label><input type="radio" name="role" value="teacher" onclick="check()"> ผู้สอน </label> 
                     <label> <input type="radio" name="role" value="student" onclick="toggleStudentIdField()"> นักศึกษา </label> 
-                    <label> <input type="radio" name="role" value="Ta" onclick="toggleTaIdField()"> ผู้ช่วยสอน </label>
+                    <label> <input type="radio" name="role" value="ta" onclick="toggleTaIdField()"> ผู้ช่วยสอน (TA) </label>
                 </div>
                 <input type="text" name="fname" id="fname" placeholder="ชื่อ" required><br>
                 <input type="text" name="lname" id="lname" placeholder="นามสกุล"  required><br>
