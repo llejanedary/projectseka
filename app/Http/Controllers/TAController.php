@@ -17,8 +17,8 @@ class TAController extends Controller
     
 
     public function TAadd(){
-        // $session=session('std_id');
-        // $student = Student::where('kkumail', $session)->first();
+        $session=session('std_id');
+        $student = Student::where('kkumail', $session)->first();
         return view("/TAaddsc", compact('student'));
     }
 

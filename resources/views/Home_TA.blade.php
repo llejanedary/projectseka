@@ -27,14 +27,16 @@
 
 
 <div class="container2">
-    <a href="http://127.0.0.1:8000/TAaddcs">
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <p class="card-text">test 1</p>
-            </div>
+            <div class="card" style="width: 18rem;">
+            <a href="{{route('TAaddsc')}}">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">test 1</p>
+                </div>
+            </a>
+           
         </div>
-    </a>
+
 </div>
 
 </body>

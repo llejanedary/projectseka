@@ -17,10 +17,16 @@
     <div class="boxprofile">
         <img src="pic/profile.png" alt="รูปโปรไฟล์">
         <div class="addsc">
-            <button><p>กรอกคะแนน</p></button>
+            <a href="#">
+                <button type="button" class="btn btn-warning"><p>กรอกคะแนน</p></button>
+            </a>
+            
         </div>
         <div class="viewsc">
-            <button><p>ดูคะแนน</p></button>
+            <a href="{{route('TAview')}}">
+                <button><p>ดูคะแนน</p></button>
+            </a>
+            
         </div>
         <div class="logout">
             <a href="{{ route('logout') }}"
@@ -28,7 +34,7 @@
                         document.getElementById('logout-form').submit();">
                     {{ __('ออกจากระบบ') }}
                     </a>
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    <form id="logout-form" action="{{ route('logout') }}" method="GET" style="display: none;">
                         @csrf
                 </form>
             </a>

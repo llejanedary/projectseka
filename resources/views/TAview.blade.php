@@ -28,7 +28,7 @@
                         document.getElementById('logout-form').submit();">
                     {{ __('ออกจากระบบ') }}
                     </a>
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    <form id="logout-form" action="{{ route('logout') }}" method="GET" style="display: none;">
                         @csrf
                 </form>
             </a>
@@ -44,6 +44,28 @@
                 <input type="submit" value = "ยืนยัน">
             </div>
         </form>
+    </div>
+
+    <div class="labscore"><br>
+        <table>
+            <thead>
+                <tr>
+                    <th>Lab1</th>
+                    <th>Lab1</th>
+                    <th>Lab1</th>
+                    <th>Lab1</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>คะแนน</td>
+                    <td>คะแนน</td>
+                    <td>คะแนน</td>
+                    <td>คะแนน</td>
+                </tr>
+                <!-- สร้างแถวอื่น ๆ ตามความต้องการ -->
+            </tbody>
+        </table>
     </div>
 
 

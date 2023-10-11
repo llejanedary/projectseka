@@ -64,5 +64,5 @@ Route::get('/detailStudent',function () {
 });
 Route::get('Home_TA',[TAController::class, "index"]);
 // Route::get('HomeTA', [TAController::class, 'name'])->name('name');
-Route::get('TAaddsc', [TAController::class, 'TAadd']);
-// Route::get('TAview', [TAController::class, 'TAview'])->name('TAview');
+Route::get('TAaddsc', [TAController::class, 'TAadd'])->name('TAaddsc');
+Route::get('TAview', [TAController::class, 'TAview'])->name('TAview');
