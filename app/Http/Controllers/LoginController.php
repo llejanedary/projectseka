@@ -8,6 +8,7 @@ use \Illuminate\Support\Facades\Hash;
 use App\Models\Teacher; 
 use App\Models\Student;
 use App\Models\Classroom;
+use App\Models\Ta;
 use Illuminate\Support\Facades\Auth;
 class LoginController extends Controller
 {
@@ -26,10 +27,11 @@ class LoginController extends Controller
 
         if (!$teacher) {
             $student = Student::where('kkumail', $kkumail)->first();
+            $ta = Ta::where('kkumail',$kkumail)->first();
         }
 
         if ($teacher && Hash::check($password, $teacher->password)) {
- 
+
             $teacher = Teacher::where('kkumail', $kkumail)->first();
         
             $request->session()->put('teacher_id', $teacher->kkumail);
@@ -44,7 +46,15 @@ class LoginController extends Controller
             return redirect('student');
             
 
-        } else {
+        } elseif($ta && Hash::check($password,$ta->$password)){
+            $ta = Ta::where('kkummail',$kkumail)->first();
+            $request->session()->put('id_ta',$ta->kkumail);
+            return redirect('Home_TA');
+        }
+        
+        
+        
+        else {
             session()->flash('alert', 'อีเมลหรือรหัสผ่านไม่ถูกต้อง');
             return redirect()->back();
         }

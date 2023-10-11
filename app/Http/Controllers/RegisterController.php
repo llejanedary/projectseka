@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 use \Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use App\Models\Teacher; 
+use App\Models\Ta;
 use App\Models\Student;
+use App\Models\User;
 
 class RegisterController extends Controller
 {
@@ -19,11 +21,15 @@ class RegisterController extends Controller
       
         $existingTeacher = Teacher::where('kkumail', $kkumail)->first();
         $existingStudent = Student::where('kkumail', $kkumail)->first();
-
+        $existingTa = Ta::where('kkumail',$kkumail)->first();
         if ($existingTeacher || $existingStudent) {
             session()->flash('alert', 'Email นี้ถูกใช้งานแล้ว');
             return redirect()->back();
         }
+        // else if ($existingTeacher || $existingTa){
+        //     session()->flash('alert', 'Email นี้ถูกใช้งานแล้ว');
+        //     return redirect()->back();
+        // }
 
         if ($request->role === 'teacher') {
           
@@ -66,12 +72,34 @@ class RegisterController extends Controller
                 $student->password = Hash::make($password);
                 $student->kkumail = $kkumail;
                 $student->save();
-            } else {
-                session()->flash('alert', 'กรุณากรอกข้อมูลรหัสนักศึกษา');
-                return redirect()->back();
+            } elseif ($request->role === 'ta') {
+                if ($request->has('id_std')) {
+                    $existingTa = Ta::where('id_Std', $request->id_Std)->first();
+            
+                    if ($existingTa) {
+                        session()->flash('alert', 'ผู้ช่วยสอนนี้ถูกใช้งานแล้ว');
+                        return redirect()->back();
+                    }
+            
+                    $Ta = new Ta;
+                    $Ta->idStd = $request->idStd;
+                    $Ta->fname = $request->fname;
+                    $Ta->lname = $request->lname;
+                    $password = $request->input('password');
+                    
+                    if (strlen($password) > 20) {
+                        session()->flash('alert', 'รหัสผ่านต้องมีความยาวไม่เกิน 20 ตัว');
+                        return redirect()->back();
+                    }
+            
+                    $Ta->password = Hash::make($password);
+                    $Ta->kkumail = $kkumail;
+                    $Ta->save();
+                    
+                }
             }
-        }
-
-        return redirect()->route('login');
+            
+            return redirect()->route('login');
     }
+}
 }

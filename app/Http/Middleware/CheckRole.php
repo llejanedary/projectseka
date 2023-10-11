@@ -20,6 +20,9 @@ class CheckRole
             }elseif($request->session()->Has('std_id')){
                 return $next ($request);
             }
+            elseif($request->session()->Has('id_ta')){
+                return $next($request);
+            }
             abort(403, 'Unauthorized'); 
     }
 }
