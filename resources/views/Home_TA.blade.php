@@ -26,7 +26,7 @@
     </div>
 
 
-<div class="container2">
+{{-- <div class="container2">
             <div class="card" style="width: 18rem;">
             <a href="{{route('TAaddsc')}}">
                 <img src="..." class="card-img-top" alt="...">
@@ -37,6 +37,24 @@
            
         </div>
 
+</div> --}}
+<div class="headsubject">
+    รายวิชาของคุณ
+</div>
+<div class="contentsubject">
+    @if(count($classrooms) > 0)
+        @foreach ($classrooms as $class)
+        <a href="{{ route('class', ['id' => $class->id]) }}">
+            <div class="subject">
+                <img src="pic/default_poster.png" alt="รูปวิชา">
+                <hr class="hr">
+                <p class="subjectcode"> {{ $class->subjectcode }} {{ $class->subjectName }} </p>
+            </div>
+            </a> 
+        @endforeach
+    @else
+        <p class="emptyclass">ยังไม่มีรายวิชาที่ถูกสร้าง</p>
+    @endif                                                                                                                                          
 </div>
 
 </body>

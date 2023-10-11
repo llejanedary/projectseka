@@ -7,16 +7,17 @@
     <link rel="stylesheet" href="register.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
-    <title>sss</title>
+    <title>sss</title> 
     <script>
         
         function validateForm() {
             var teacherRadio = document.querySelector('input[name="role"][value="teacher"]');
             var studentRadio = document.querySelector('input[name="role"][value="student"]');
+            var TARadio = document.querySelector('input[name="role"][value="Ta"]');
             var password = document.getElementById('password').value;
             var confirm_password = document.getElementById('confirm_password').value;
 
-            if (!teacherRadio.checked && !studentRadio.checked) {
+            if (!teacherRadio.checked && !studentRadio.checked && !TARadio.checked) {
                 alert('กรุณาเลือก สถานะ ก่อนสมัครสมาชิก');
                 return false; 
             }
@@ -33,10 +34,15 @@
 
             return true; 
         }
+        
 
         window.onload = function() {
             toggleStudentIdField(); 
         }
+        window.onload = function() {
+            toggleTaIdField(); 
+        }
+
 
     function toggleStudentIdField() {
         var studentRadio = document.querySelector('input[name="role"][value="student"]');
@@ -46,6 +52,17 @@
             studentIdField.style.display = 'block';
         } else {
             studentIdField.style.display = 'none';
+        }
+
+    }
+    function toggleTaIdField() {
+        var TARadio = document.querySelector('input[name="role"][value="Ta"]');
+        var  TaIdField = document.getElementById('TaIdField');
+
+        if (TARadio.checked) {
+            TaIdField.style.display = 'block';
+        } else {
+            TaIdField.style.display = 'none';
         }
 
     }
@@ -76,6 +93,7 @@
                 <div class="radioitem">
                     <label><input type="radio" name="role" value="teacher" onclick="check()"> ผู้สอน </label> 
                     <label> <input type="radio" name="role" value="student" onclick="toggleStudentIdField()"> นักศึกษา </label> 
+                    <label> <input type="radio" name="role" value="Ta" onclick="toggleTaIdField()"> ผู้ช่วยสอน </label>
                 </div>
                 <input type="text" name="fname" id="fname" placeholder="ชื่อ" required><br>
                 <input type="text" name="lname" id="lname" placeholder="นามสกุล"  required><br>
@@ -87,9 +105,7 @@
                     <input type="text" name="idStd" id="idStd" pattern="[0-9]{9}-[0-9]" placeholder="รหัสนักศึกษา" ><br>
                 </div>
                 <button type="submit" class="goregister">สมัครสมาชิก</button>
-                 
             </form>
-         
         </div>
     </div>
 </body>

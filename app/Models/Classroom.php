@@ -19,4 +19,8 @@ class Classroom extends Model
     {
         return $this->belongsToMany(Student::class, 'classhasstudents', 'idClassroom', 'idStudent');
     }
+
+    public function tas(){
+        return $this->belongsToMany(Ta::class,'classroomhasTa','id_ta','idClassroom');
+    }
 }

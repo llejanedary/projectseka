@@ -171,3 +171,30 @@ button.logout {
     /* ย้าย .checkscore ขึ้นไปด้านบนเพื่อทับ .addscore */
     cursor: pointer;
 }
+
+.contentsubject {
+    width: 250px;
+    height: 130px;
+    float: left;
+    margin-left: 90px;
+    position: relative;
+    border: 1px solid;
+    margin-top: 30px;
+    /* เพิ่มตำแหน่งสำหรับเนื้อหาภายใน contentsubject */
+}
+
+.headsubject {
+    float: left;
+    width: 1060px;
+    height: 50px;
+    background-color: #ffff;
+    margin-top: 40px;
+    margin-left: 90px;
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 1.4em;
+    box-shadow: 5px 5px 5px rgba(0.1, 0.1, 0.1, 0.1);
+}
