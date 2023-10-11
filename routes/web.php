@@ -62,7 +62,7 @@ Route::get('/student', [StudentController::class,'student']);
 Route::get('/detailStudent',function () {
     return view('detailStudent');
 });
-Route::get('HomeTA',[TAController::class, "TA"])->name('TA');
-Route::get('HomeTA', [TAController::class, 'name'])->name('name');
-Route::get('TAaddsc', [TAController::class, 'TAadd'])->name('TAadd');
-Route::get('TAview', [TAController::class, 'TAview'])->name('TAview');
+Route::get('Home_TA',[TAController::class, "index"]);
+// Route::get('HomeTA', [TAController::class, 'name'])->name('name');
+Route::get('TAaddsc', [TAController::class, 'TAadd']);
+// Route::get('TAview', [TAController::class, 'TAview'])->name('TAview');

@@ -1,43 +1,50 @@
 * {
     font-family: 'Mitr', sans-serif;
 }
+
 body {
     margin: 0;
     padding: 0;
     background-color: #fff4df;
 }
-header{
+
+header {
     width: fit;
     height: 80px;
-    background-color:#93B1C7;
+    background-color: #93B1C7;
 }
-.boxprofile{
+
+.boxprofile {
     width: 250px;
-    height: 580px ;
-    background-color:rgb(255, 255, 255);
+    height: 580px;
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
     margin-top: 40px;
     float: left;
     margin-left: 60px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* จัดเนื้อหาตรงกลางแนวนอน */
-    box-shadow: 5px 5px 5px  rgba(0.1, 0.1, 0.1, 0.1);
-
+    align-items: center;
+    /* จัดเนื้อหาตรงกลางแนวนอน */
+    box-shadow: 5px 5px 5px rgba(0.1, 0.1, 0.1, 0.1);
 }
-.boxprofile img{
+
+.boxprofile img {
     width: 70px;
-    height: 70px ;
+    height: 70px;
     object-fit: cover;
     background-color: #ffff;
     margin-top: 40px;
     opacity: 0.7;
 }
-.username,.email{
+
+.username,
+.email {
     opacity: 0.7;
     line-height: 1.4;
 }
-.username{
+
+.username {
     margin-top: 10px;
 }
 
@@ -52,8 +59,10 @@ header{
     align-items: center;
     justify-content: center;
     position: relative;
-    top: -2px; /* ย้าย .checkscore ขึ้นไปด้านบนเพื่อทับ .addscore */
-    z-index: 1; /* เพิ่มค่า z-index ต่ำลงเพื่อให้ .addscore:hover ทับ .checkscore */
+    top: -2px;
+    /* ย้าย .checkscore ขึ้นไปด้านบนเพื่อทับ .addscore */
+    z-index: 1;
+    /* เพิ่มค่า z-index ต่ำลงเพื่อให้ .addscore:hover ทับ .checkscore */
     margin-top: 20px;
 }
 
@@ -62,11 +71,12 @@ header{
     color: #F8F1E3;
     width: 250px;
     height: 50px;
-    top: -2px; /* ย้าย .checkscore ขึ้นไปด้านบนเพื่อทับ .addscore */
+    top: -2px;
+    /* ย้าย .checkscore ขึ้นไปด้านบนเพื่อทับ .addscore */
     cursor: pointer;
 }
 
-.container2{
+.container2 {
     border: 1px solid rgb(8, 8, 8);
     border-radius: 10px;
     margin-left: 350px;
@@ -76,11 +86,12 @@ header{
     background-color: antiquewhite;
 }
 
-.container2 p{
+.container2 p {
     margin-top: 160px;
     margin-left: 20px;
 }
-.hk{
+
+.hk {
     background-color: #fff4df;
     width: 700px;
     margin-top: 20px;
@@ -89,7 +100,73 @@ header{
     height: 45px;
 }
 
-.hk p{
+.hk p {
     margin-top: 25px;
     margin-left: 210px;
+}
+
+.boxprofile {
+    width: 250px;
+    height: 580px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin-top: 40px;
+    float: left;
+    margin-left: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* จัดเนื้อหาตรงกลางแนวนอน */
+    box-shadow: 5px 5px 5px rgba(0.1, 0.1, 0.1, 0.1);
+}
+
+.boxprofile img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    background-color: #ffff;
+    margin-top: 40px;
+    opacity: 0.7;
+}
+
+.username,
+.email {
+    opacity: 0.7;
+    line-height: 1.4;
+}
+
+.username {
+    margin-top: 10px;
+}
+
+button.logout {
+    width: 200px;
+    height: 50px;
+    background-color: #ffff;
+    border-top: 2px solid #93B1C7;
+    border-bottom: 2px solid #93B1C7;
+    border-left: none;
+    /* ลบ border ด้านซ้าย */
+    border-right: none;
+    /* ลบ border ด้านขวา */
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -2px;
+    /* ย้าย .checkscore ขึ้นไปด้านบนเพื่อทับ .addscore */
+    z-index: 1;
+    /* เพิ่มค่า z-index ต่ำลงเพื่อให้ .addscore:hover ทับ .checkscore */
+    margin-top: 20px;
+}
+
+.logout:hover {
+    background-color: #93B1C7;
+    color: #F8F1E3;
+    width: 250px;
+    height: 50px;
+    top: -2px;
+    /* ย้าย .checkscore ขึ้นไปด้านบนเพื่อทับ .addscore */
+    cursor: pointer;
 }

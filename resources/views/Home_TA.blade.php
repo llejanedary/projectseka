@@ -16,24 +16,25 @@
     </div>
     <div class="boxprofile">
         <img src="pic/profile.png" alt="รูปโปรไฟล์">
-        <div class="username">#</div>
-        <div class="email">#</div>
-        <div class="logout">
-            <a href="{{ route('logout') }}"
-                        onclick="event.preventDefault();
-                        document.getElementById('logout-form').submit();">
-                    {{ __('ออกจากระบบ') }}
-                    </a>
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                        @csrf
-                     </form>
-        </div>
+        <div class="username">{{$student->fname}}</div>
+        <div class="email">{{$student->kkumail}}</div>  
+        <form method="GET" action="{{ route('logout') }}">
+            @csrf
+            <button type="submit" class="logout" @click.prevent="$root.submit();">ออกจากระบบ</button>
+        </form>
 
     </div>
 
 
 <div class="container2">
-    {{-- <p>{{$users}}</p> --}}
+    <a href="http://127.0.0.1:8000/TAaddcs">
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">test 1</p>
+            </div>
+        </div>
+    </a>
 </div>
 
 </body>

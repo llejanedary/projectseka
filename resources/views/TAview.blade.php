@@ -17,7 +17,7 @@
     <div class="boxprofile">
         <img src="pic/profile.png" alt="รูปโปรไฟล์">
         <div class="addsc">
-             <button><p>กรอกคะแนน</p></button>
+            <button><p>กรอกคะแนน</p></button>
         </div>
         <div class="viewsc">
             <button><p>ดูคะแนน</p></button>
